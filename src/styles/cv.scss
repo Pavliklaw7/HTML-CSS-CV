@@ -1,0 +1,27 @@
+.cv {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  border-top: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+
+  &-image {
+    height: 250px;
+
+    & > img {
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-about {
+    grid-column: span 3;
+    padding: 1rem 2rem;
+    background-color: antiquewhite;
+    border-bottom: 1px solid lightgray;
+
+    &-name {
+      font-size: 2rem;
+    }
+  }
+}

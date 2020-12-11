@@ -7,86 +7,167 @@
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <main class="main">
-      <div class="cv main__cv">
-        <div class="cv__image"> <!-- image -->
+    <main>
+      <div class="cv">
+        <div class="cv-image"> <!-- image -->
           <img src="./images/person__image.jpg" alt="person image">
         </div>
         <div class="cv-about"> <!-- about -->
-          <h2 class="cv-about__name">John Smith</h2>
-          <p class="cv-about__location">Portland, Oregon, USA</p>
-          <p class="cv-about__language">English</p>
-          <div class="cv-about__skills"> <!-- skills -->
-            <div class="skills__item">PHP</div>
-            <div class="skills__item">Ruby</div>
-            <div class="skills__item">Javascript</div>
-            <div class="skills__item">ActionScript</div>
-          </div>
+          <fieldset class="relative mb05">
+            <input
+              id="name"
+              name="editable"
+              class="cv-about-name editable-content"
+              type="button"
+              value="John Smith"
+              tabindex="1"
+            >
+            </input>
+            <button id="applay-name" class="editable-content-btn relative b5">
+              <i class="fas fa-check"></i>
+            </button>
+            <button id="discard-name" class="editable-content-btn relative b5">x</button>
+          </fieldset>
+          <fieldset class="relative mb05">
+            <input
+              id="location"
+              name="editable"
+              class="cv-about-location editable-content"
+              type="button"
+              value="Portland, Oregon, USA"
+              tabindex="2"
+            >
+            </input>
+            <button id="applay-location" class="editable-content-btn relative">
+              <i class="fas fa-check"></i>
+            </button>
+            <button id="discard-location" class="editable-content-btn relative">x</button>
+          </fieldset>
+          <fieldset class="relative mb1">
+            <input
+              id="language"
+              name="editable"
+              class="cv-about-language editable-content"
+              type="button"
+              value="English"
+              tabindex="3"
+            ></input>
+            <button id="applay-language" class="editable-content-btn relative">
+              <i class="fas fa-check"></i>
+            </button>
+            <button id="discard-language" class="editable-content-btn relative">x</button>
+          </fieldset>
+          <ul id="skills" class="skills mb1 relative flex-start"> <!-- skills -->
+            <li class="skills-item">
+              <span>PHP</span>
+              <button name="removeSkillButton" class="skills-remove-btn">x</button>
+            </li>
+            <li class="skills-item">
+              <span>Ruby</span>
+              <button name="removeSkillButton" class="skills-remove-btn">x</button>
+            </li>
+            <li class="skills-item">
+              <span>Javascript</span>
+              <button name="removeSkillButton" class="skills-remove-btn">x</button>
+            </li>
+            <li class="skills-item">
+              <span>ActionScript</span>
+              <button name="removeSkillButton" class="skills-remove-btn">x</button>
+            </li>
+          </ul>
+          <form
+            action="#"
+            method="POST"
+            class="add-skill-form"
+          >
+            <input
+              id="newSkill"
+              class="add-skill-input p05"
+              type="text"
+              placeholder="Add skill..."
+              tabindex="3"
+            >
+            <button
+              id="addSkillButton"
+              class="add-skill-btn relative"
+              type="submit"
+            >
+              x
+            </button>
+          </form>
         </div>
-
-        <div class="block cv__portfolio"> <!-- block -->
-          <h3 class="block__title">Portfolio</h3>
-          <h4 class="block__subTitle">PHP, Ruby, Javascript</h4>
-          <ul class="block__list">
-            <li class="block__listItem">NavalPlan, PHP, Ruby</li>
-            <li class="block__listItem">MyTime, Javascript</li>
-            <li class="block__listItem">Formidable, PHP, Ruby</li>
-            <li class="block__listItem">MyTime, Javascript</li>
-            <li class="block__listItem">Monsoon, ActionScript</li>
+        <div class="block"> <!-- block -->
+          <h3 class="block-title">Portfolio</h3>
+          <h4 class="block-subTitle mb1">PHP, Ruby, Javascript</h4>
+          <ul class="block-list">
+            <li class="block-list-item">NavalPlan, PHP, Ruby</li>
+            <li class="block-list-item">MyTime, Javascript</li>
+            <li class="block-list-item">Formidable, PHP, Ruby</li>
+            <li class="block-list-item">MyTime, Javascript</li>
+            <li class="block-list-item">Monsoon, ActionScript</li>
           </ul>
         </div>
 
-        <div class="block cv__experience"> <!-- block -->
-          <h3 class="block__title">Experience</h3>
-          <ul class="block__list">
-            <li class="block__listItem">PHP, 6 years</li>
-            <li class="block__listItem">Ruby, 7 years</li>
-            <li class="block__listItem">Javascript, 4 years</li>
-            <li class="block__listItem">ActionScript, 3 years</li>
+        <div class="block"> <!-- block -->
+          <h3 class="block-title mb1">Experience</h3>
+          <ul class="block-list">
+            <li class="block-list-item">PHP, 6 years</li>
+            <li class="block-list-item">Ruby, 7 years</li>
+            <li class="block-list-item">Javascript, 4 years</li>
+            <li class="block-list-item">ActionScript, 3 years</li>
           </ul>
         </div>
 
-        <div class="block cv__code"> <!-- block -->
-          <h3 class="block__title">Sample code and algorithms</h3>
+        <div class="block relative"> <!-- block -->
+          <div class="block-header">
+            <h3 class="block-title mt1">Sample code and algorithms</h3>
+          </div>
+          <iframe
+          class="block-iframe"
+            src="./scripts/main.js"
+            title="Iframe Example"
+          >
+          </iframe>
+        </div>
+        <div class="block"> <!-- block -->
+          <div class="block"> <!-- block -->
+            <h3 class="block-title">Availability</h3>
+            <p class="block-strongText"><strong>Full-time</strong></p>
+          </div>
+          <div class="block"> <!-- block -->
+            <h3 class="block-title">Preferred environment</h3>
+            <p class="block-text m1">Git, GitHub, vim, emacs, Jenkins, Mac OSX</p>
+          </div>
         </div>
 
-        <div class="block cv__availability"> <!-- block -->
-          <div class="block">
-            <h3 class="block__title">Availability</h3>
-            <p class="block__strongText"><strong>Full-time</strong></p>
-          </div>
-          <div class="block">
-            <h3 class="block__title">Preferred environment</h3>
-            <p class="block__text">Git, GitHub, vim, emacs, Jenkins, Mac OSX</p>
-          </div>
-        </div>
-
-        <div class="block cv__blockquote"> <!-- block -->
-          <h3 class="block__title">The most amazing …</h3>
-          <blockquote class="block__blockquote">
+        <div class="block"> <!-- block -->
+          <h3 class="block-title">The most amazing …</h3>
+          <blockquote class="block-blockquote">
             … Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore magna aliqua et dol ut labore et dolore
+            <p class="block-author">- Martin</p>
           </blockquote>
         </div>
 
-        <div class="block cv__blockquote"> <!-- block -->
-          <h3 class="block__title">In clients I look for …</h3>
-          <blockquote class="block__blockquote">
+        <div class="block"> <!-- block -->
+          <h3 class="block-title">In clients I look for …</h3>
+          <blockquote class="block-blockquote">
             … Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore magna aliqua
-            <p class="block__author">- Matrin</p>
+            <p class="block-author">- Martin</p>
           </blockquote>
         </div>
 
         <div class="block"></div> <!-- block -->
 
-        <div class="block cv__blockquote"> <!-- block -->
-          <h3 class="block__title">The most amazing …</h3>
-          <blockquote class="block__blockquote">
+        <div class="block"> <!-- block -->
+          <h3 class="block-title">The most amazing …</h3>
+          <blockquote class="block-blockquote">
             … Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore magna aliqua
           </blockquote>
         </div>
 
       </div>
     </main>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="https://kit.fontawesome.com/7d848e7156.js" crossorigin="anonymous"></script>
   </body>
 </html>

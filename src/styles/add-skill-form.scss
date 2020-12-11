@@ -1,0 +1,30 @@
+.add-skill-form {
+  display: flex;
+  align-items: center;
+
+  .add-skill-input {
+    border: none;
+    background-color: transparent;
+  }
+
+  .add-skill-btn {
+    width: 20px;
+    height: 20px;
+    right: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+  }
+
+  &:focus-within {
+    .add-skill-input {
+      border: 1px solid #000;
+      background-color: #fff;
+
+      & + .add-skill-btn {
+        display: block;
+      }
+    }
+  }
+}

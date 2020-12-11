@@ -9,7 +9,13 @@ h2,
 h3,
 h4,
 p,
-blockquote {
+blockquote,
+ul,
+fieldset {
   margin: 0;
   padding: 0;
+}
+
+fieldset {
+  border: none;
 }

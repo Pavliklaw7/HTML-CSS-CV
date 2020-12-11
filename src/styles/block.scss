@@ -1,0 +1,75 @@
+.block {
+  border-left: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 1rem 0 0;
+
+  & > .block {
+    border-left: none;
+
+    &:nth-child(2) {
+      border-bottom: none;
+    }
+  }
+
+  &-header {
+    position: absolute;
+    height: 25%;
+    background-color: rgba(253, 253, 253, 0.9);
+    width: 100%;
+  }
+
+  &-list {
+    padding: 0 2rem;
+  }
+
+  &-title,
+  &-subTitle,
+  &-text {
+    text-align: center;
+  }
+
+  &-strongText {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  &-blockquote {
+    position: relative;
+    margin: 1.5rem;
+    z-index: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/quote.svg);
+      display: block;
+      width: 50px;
+      height: 50px;
+      z-index: 1;
+      font-size: 3rem;
+      opacity: 0.1;
+    }
+
+    &::before {
+      top: -25px;
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      bottom: -80px;
+      right: -10px;
+    }
+  }
+
+  &-author {
+    text-align: end;
+    margin-top: 1rem;
+  }
+
+  .block-iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
