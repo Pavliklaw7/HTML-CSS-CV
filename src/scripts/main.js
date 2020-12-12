@@ -75,37 +75,35 @@ language.onclick = changeLanguageValue;
 
 /* Add Skill */
 
-const addSkillInput = document.getElementById('newSkill');
-const addSkillButton = document.getElementById('addSkillButton');
-const skills = document.getElementById('skills');
-
-const removeSkillButtons = document.getElementsByName('removeSkillButton');
+const skillInput = document.getElementById('newSkill');
+const skillButton = document.getElementById('addSkillButton');
+const ulSkills = document.getElementById('skills');
 
 const addSkill = function(event) {
   event.preventDefault();
 
-  const text = addSkillInput.value;
+  const text = skillInput.value;
   const li = document.createElement('li');
 
   li.innerHTML = `<span>${text}</span>
   <button name="removeSkillButton" class="skills-remove-btn">x</button>`;
   li.classList.add('skills-item');
-  skills.appendChild(li);
-  addSkillInput.value = '';
+  ulSkills.appendChild(li);
+  skillInput.value = '';
 };
 
-addSkillButton.onclick = addSkill;
+skillButton.onclick = addSkill;
 
 /* Remove Skill */
 
-const removeSkill = function() {
-  for (const removeSkillButton of removeSkillButtons) {
-    removeSkillButton.addEventListener('click', function() {
-      const li = this.parentNode;
+const removeSkill = function(event) {
+  const skill = event.target.closest('.skills-item');
 
-      li.remove();
-    });
+  if (event.target.name !== 'removeSkillButton') {
+
   }
+
+  skill.remove();
 };
 
-removeSkillButtons.forEach(btn => btn.addEventListener('click', removeSkill));
+ulSkills.onclick = removeSkill;
