@@ -1,9 +1,10 @@
-.block {
+.feature {
+  position: relative;
   border-left: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
   padding: 1rem 0 0;
 
-  & > .block {
+  & > .feature {
     border-left: none;
 
     &:nth-child(2) {
@@ -16,10 +17,12 @@
     height: 25%;
     background-color: rgba(253, 253, 253, 0.9);
     width: 100%;
+    padding-top: 1rem;
   }
 
   &-list {
-    padding-left: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
   }
 
   &-title,
@@ -32,11 +35,18 @@
     text-align: center;
     margin: 1rem 0;
     font-size: 2.5rem;
+
+    @media (max-width: 460px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &-text {
+    margin: 1rem;
   }
 
   &-blockquote {
-    position: relative;
-    margin: 1.5rem;
+    margin: 1.5rem 1.5rem 3rem;
     z-index: 0;
 
     &::before,
@@ -45,21 +55,22 @@
       position: absolute;
       background-image: url(../images/quote.svg);
       display: block;
-      width: 50px;
-      height: 50px;
+      width: 35px;
+      height: 35px;
       z-index: 1;
       font-size: 3rem;
       opacity: 0.1;
     }
 
     &::before {
-      top: -25px;
+      top: 42px;
+      left: 12px;
       transform: rotate(180deg);
     }
 
     &::after {
-      bottom: -80px;
-      right: -10px;
+      bottom: 30px;
+      right: 20px;
     }
   }
 
@@ -68,7 +79,7 @@
     margin-top: 1rem;
   }
 
-  .block-iframe {
+  &-iframe {
     height: 100%;
     width: 100%;
   }

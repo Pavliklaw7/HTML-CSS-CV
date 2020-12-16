@@ -1,37 +1,33 @@
 .cv {
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-  border-top: 1px solid lightgray;
-  border-right: 1px solid lightgray;
+  &-inner {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
 
-  @media (max-width: 840px) {
-    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
-  }
-
-  @media (max-width: 530px) {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    @media (max-width: 730px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &-image {
     height: 100%;
     width: 100%;
     object-fit: cover;
-
-    @media (max-width: 1124px) {
-      width: 320px;
-    }
-
-    @media (max-width: 530px) {
-      width: 100%;
-      height: auto;
-    }
   }
 
   &-about {
     grid-column: span 3;
+    width: 100%;
     padding: 1rem 2rem;
     background-color: antiquewhite;
     border-bottom: 1px solid lightgray;
+
+    @media (max-width: 730px) {
+      grid-column: span 1;
+    }
+
+    @media (max-width: 490px) {
+      grid-column: span 1;
+    }
 
     &-item {
       position: relative;
@@ -47,10 +43,5 @@
     &-name {
       font-size: 2rem;
     }
-  }
-
-  &-skills {
-    position: relative;
-    margin-bottom: 1rem;
   }
 }

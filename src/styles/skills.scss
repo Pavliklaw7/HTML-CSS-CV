@@ -1,8 +1,10 @@
 .skills {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 10px 0;
+  margin-bottom: 1rem;
   list-style: none;
 
   &-remove-btn {
@@ -37,6 +39,10 @@
       > .skills-remove-btn {
         opacity: 1;
       }
+    }
+
+    @media (max-width: 540px) {
+      font-size: 0.6rem;
     }
   }
 
