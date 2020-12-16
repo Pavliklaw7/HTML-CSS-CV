@@ -1,4 +1,6 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://pavliklaw7.github.io/HTML-CSS-CV/)
+# HTML-CSS-JS-CV
+Tech stack: HTML5, SASS, JS (editable name/location/language, add/remove skills), semantic layout.
+
+Fully responsive layout was made by using CSS Grid (mobiles, tablets, laptops, high screens).
+
+Click the link to see DEMO.
