@@ -3,4 +3,4 @@ Tech stack: HTML5, SASS, JS (editable name/location/language, add/remove skills)
 
 Fully responsive layout was made by using CSS Grid (mobiles, tablets, laptops, high screens).
 
-Click the link to see DEMO.
+Click the link to see [DEMO](https://pavliklaw7.github.io/HTML-CSS-CV/).
