@@ -6,7 +6,7 @@ const name = document.getElementById('name');
 const location = document.getElementById('location');
 const language = document.getElementById('language');
 
-const changeNameValue = function() { /* changeNameValue */
+const changeNameValue = function() {
   const applayName = document.getElementById('applay-name');
   const discardName = document.getElementById('discard-name');
   let nameValue = name.value;
@@ -27,7 +27,7 @@ const changeNameValue = function() { /* changeNameValue */
   discardName.onclick = discardChanges;
 };
 
-const changeLocationValue = function() { /* changeLocationValue */
+const changeLocationValue = function() {
   const applayLocation = document.getElementById('applay-location');
   const discardLocation = document.getElementById('discard-location');
   let locationValue = location.value;
@@ -48,7 +48,7 @@ const changeLocationValue = function() { /* changeLocationValue */
   discardLocation.onclick = discardChanges;
 };
 
-const changeLanguageValue = function() { /* changeLanguageValue */
+const changeLanguageValue = function() {
   const applayLanguage = document.getElementById('applay-language');
   const discardLanguage = document.getElementById('discard-language');
   let LanguageValue = language.value;
@@ -99,7 +99,7 @@ skillButton.onclick = addSkill;
 const removeSkill = function(event) {
   const skill = event.target.closest('.skills-item');
 
-  if (event.target.name !== 'removeSkillButton') {
+  if (event.target.className !== 'skills-remove-btn') {
 
   }
 

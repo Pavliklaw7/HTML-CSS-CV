@@ -4,13 +4,26 @@
   border-top: 1px solid lightgray;
   border-right: 1px solid lightgray;
 
-  &-image {
-    height: 250px;
+  @media (max-width: 840px) {
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  }
 
-    & > img {
-      height: 100%;
-      max-width: 100%;
-      object-fit: cover;
+  @media (max-width: 530px) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+
+  &-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @media (max-width: 1124px) {
+      width: 320px;
+    }
+
+    @media (max-width: 530px) {
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -20,8 +33,24 @@
     background-color: antiquewhite;
     border-bottom: 1px solid lightgray;
 
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      &:nth-child(3) {
+        margin-bottom: 1rem;
+      }
+    }
+
     &-name {
       font-size: 2rem;
     }
+  }
+
+  &-skills {
+    position: relative;
+    margin-bottom: 1rem;
   }
 }

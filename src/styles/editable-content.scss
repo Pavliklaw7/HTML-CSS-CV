@@ -10,7 +10,7 @@
   }
 
   &-btn {
-    position: absolute;
+    position: relative;
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0;
     border: 0;
@@ -32,7 +32,7 @@
       cursor: pointer;
 
       + .editable-content-btn {
-        right: 70px;
+        right: 65px;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -40,5 +40,9 @@
         cursor: pointer;
       }
     }
+  }
+
+  @media (max-width: 740px) {
+    width: 100%;
   }
 }
