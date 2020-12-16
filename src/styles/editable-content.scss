@@ -1,9 +1,9 @@
 .editable-content {
-  background-color: transparent;
   border: none;
   width: 50%;
-  text-align: left;
   padding: 0.2rem;
+  background-color: transparent;
+  text-align: left;
 
   &:hover {
     border: 1px solid #000;
@@ -11,12 +11,12 @@
 
   &-btn {
     position: relative;
+    overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
-    padding: 0;
     border: 0;
     height: 1px;
     width: 1px;
-    overflow: hidden;
+    padding: 0;
     color: #fff;
   }
 
