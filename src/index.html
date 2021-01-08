@@ -7,7 +7,168 @@
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <header class="header"> <!-- Header -->
+      <img
+        class="cv-image"
+        src="./images/person__image.jpg"
+        alt="person image"
+      >
+      <div class="cv-about"> <!-- сv-about -->
+        <fieldset class="cv-about-item">
+          <input
+            id="name"
+            name="editable"
+            class="cv-about-name editable-content"
+            type="button"
+            value="John Smith"
+            tabindex="1"
+          >
+          </input>
+          <button id="applay-name" class="editable-content-btn">
+            <i class="fas fa-check"></i>
+          </button>
+          <button id="discard-name" class="editable-content-btn">x</button>
+        </fieldset>
+        <fieldset class="cv-about-item">
+          <input
+            id="location"
+            name="editable"
+            class="cv-about-location editable-content"
+            type="button"
+            value="Portland, Oregon, USA"
+            tabindex="2"
+          >
+          </input>
+          <button id="applay-location" class="editable-content-btn">
+            <i class="fas fa-check"></i>
+          </button>
+          <button id="discard-location" class="editable-content-btn">x</button>
+        </fieldset>
+        <fieldset class="cv-about-item">
+          <input
+            id="language"
+            name="editable"
+            class="cv-about-language editable-content"
+            type="button"
+            value="English"
+            tabindex="3"
+          ></input>
+          <button id="applay-language" class="editable-content-btn">
+            <i class="fas fa-check"></i>
+          </button>
+          <button id="discard-language" class="editable-content-btn">x</button>
+        </fieldset>
+        <ul id="skills" class="skills"> <!-- skills -->
+          <li class="skills-item">
+            <span>PHP</span>
+            <button class="skills-remove-btn">x</button>
+          </li>
+          <li class="skills-item">
+            <span>Ruby</span>
+            <button class="skills-remove-btn">x</button>
+          </li>
+          <li class="skills-item">
+            <span>Javascript</span>
+            <button class="skills-remove-btn">x</button>
+          </li>
+          <li class="skills-item">
+            <span>ActionScript</span>
+            <button class="skills-remove-btn">x</button>
+          </li>
+        </ul>
+        <form
+          action="#"
+          method="POST"
+          class="skills-add-form"
+        >
+          <input
+            id="newSkill"
+            class="skills-add-input"
+            type="text"
+            placeholder="Add skill..."
+            tabindex="3"
+          >
+          <button
+            id="addSkillButton"
+            class="skills-add-btn"
+            type="submit"
+          >
+            x
+          </button>
+        </form>
+      </div>
+    </header>
+    <main class="cv-inner">
+      <article class="feature"> <!-- cv-section -->
+        <h3 class="feature-title">Portfolio</h3> <!-- cv-section-title -->
+        <h4 class="feature-subTitle">PHP, Ruby, Javascript</h4>
+        <ul class="feature-list"> <!-- cv-list -->
+          <li class="feature-list-item">NavalPlan, PHP, Ruby</li> <!-- cv-section -->
+          <li class="feature-list-item">MyTime, Javascript</li>
+          <li class="feature-list-item">Formidable, PHP, Ruby</li>
+          <li class="feature-list-item">MyTime, Javascript</li>
+          <li class="feature-list-item">Monsoon, ActionScript</li>
+        </ul>
+      </article>
+
+      <article class="feature"> <!-- feature -->
+        <h3 class="feature-title">Experience</h3>
+        <ul class="feature-list">
+          <li class="feature-list-item">PHP, 6 years</li>
+          <li class="feature-list-item">Ruby, 7 years</li>
+          <li class="feature-list-item">Javascript, 4 years</li>
+          <li class="feature-list-item">ActionScript, 3 years</li>
+        </ul>
+      </article>
+
+      <article class="feature"> <!-- feature -->
+        <div class="feature-header">
+          <h3 class="feature-title">Sample code and algorithms</h3>
+        </div>
+        <iframe
+        class="feature-iframe"
+          src="./scripts/main.js"
+          title="Iframe Example"
+        >
+        </iframe>
+      </article>
+      <article class="feature"> <!-- feature -->
+        <div class="feature"> <!-- feature -->
+          <h3 class="feature-title">Availability</h3>
+          <p class="feature-strongText"><strong>Full-time</strong></p>
+        </div>
+        <div class="feature"> <!-- feature -->
+          <h3 class="feature-title">Preferred environment</h3>
+          <p class="feature-text">Git, GitHub, vim, emacs, Jenkins, Mac OSX</p>
+        </div>
+      </article>
+
+      <article class="feature"> <!-- feature -->
+        <h3 class="feature-title">The most amazing …</h3>
+        <blockquote class="feature-blockquote">
+          … Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore magna aliqua et dol ut labore et dolore
+          <p class="feature-author">- Martin</p>
+        </blockquote>
+      </article>
+
+      <article class="feature"> <!-- feature -->
+        <h3 class="feature-title">In clients I look for …</h3>
+        <blockquote class="feature-blockquote">
+          … Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore magna aliqua
+          <p class="feature-author">- Martin</p>
+        </blockquote>
+      </article>
+
+      <article class="feature"></article> <!-- feature -->
+
+      <article class="feature"> <!-- feature -->
+        <h3 class="feature-title">The most amazing …</h3>
+        <blockquote class="feature-blockquote">
+          … Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua et dolore magna aliqua
+        </blockquote>
+      </article>
+    </main>
+    <script src="scripts/main.js"></script>
+    <script src="https://kit.fontawesome.com/7d848e7156.js" crossorigin="anonymous"></script>
   </body>
 </html>

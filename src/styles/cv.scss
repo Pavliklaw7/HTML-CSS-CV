@@ -1,0 +1,47 @@
+.cv {
+  &-inner {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+
+    @media (max-width: 730px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-about {
+    grid-column: span 3;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: antiquewhite;
+    border-bottom: 1px solid lightgray;
+
+    @media (max-width: 730px) {
+      grid-column: span 1;
+    }
+
+    @media (max-width: 490px) {
+      grid-column: span 1;
+    }
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      &:nth-child(3) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-name {
+      font-size: 2rem;
+    }
+  }
+}
